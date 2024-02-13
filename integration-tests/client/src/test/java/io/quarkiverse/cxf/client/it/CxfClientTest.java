@@ -232,7 +232,7 @@ public class CxfClientTest {
                 .queryParam("b", 4)
                 .get("/cxf/client/auth/basic/myBasicAuthAnonymousCalculator/securedAdd")
                 .then()
-                .statusCode(500)
+                .statusCode(400)
                 .body(containsString("HTTP response '401: "));
     }
 
